@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+  <html>
+  
+  <head>
+      <meta charset="utf-8">
+      <title>Javascript</title>
+  
+      <script>
+        // Funções de callback são funções passadas como argumentos para outras funções,
+        // podendo ser utilizadas em diversos contextos, com destaque p execução assíncrona e manipulação de eventos de forma eficiente, além de otruos contextos
+        
+        function exibirArtigo(id, callbackSucesso, callbackErro){
+          //lógica: recuperar o id via requisição HTTP
+          if(true){
+            callbackSucesso('Funções de callback em JS', 'Funções de callback são muitas utilizadas....')
+          } else {
+            callbackErro('Erro ao recuperar os dados')
+          }
+        }
+    
+        var callbackSucesso = function(titulo, descricao){
+          document.write('<h1>' + titulo + '</h1>')
+          document.write('<hr />')
+          document.write('<p>' + descricao + '</p>')
+          
+        }
+        var callbackErro = function(erro){
+          document.write('<p><b>Erro:</br>' + erro + '</p>')
+        }
+    
+        exibirArtigo(1, callbackSucesso , callbackErro)
+      </script><script>
+  
+        var exibirSaudacao = function(nome)
+        {
+          document.write('Olá' + nome + ', tudo bem?')
+        }
+  
+        exibirSaudacao('Jorge')
+        
+      </script>
+  
+  
+  </head>
+  
+  <body>
+  
+  </body>
+  
+  </html>
