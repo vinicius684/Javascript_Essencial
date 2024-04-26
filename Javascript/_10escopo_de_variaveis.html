@@ -1,0 +1,42 @@
+  <!DOCTYPE html>
+  <html>
+  
+  <head>
+      <meta charset="utf-8">
+      <title>Javascript</title>
+  
+      <script>
+        //3 escopos: global, função e o bloco
+        //Em resumo: o escopo de bloco sofre elevação ou pro global ou pra função. Porém o escopo da função não sofre elevação
+    
+        var serie = 'Friends'
+    
+        if(true){
+          var serie2 = 'Game of Thrones'
+          document.write(serie)
+        }
+        
+        document.write(serie2)
+    
+        document.write('<br />')
+    
+        function x(){
+          var serie3 = 'The Walking Dead'
+          document.write(serie)
+          document.write(serie2)
+        }
+    
+        x() 
+    
+        document.write('<br />')
+        document.write(serie3) //não renderiza
+      </script>
+  
+  
+  </head>
+  
+  <body>
+  
+  </body>
+  
+  </html>
