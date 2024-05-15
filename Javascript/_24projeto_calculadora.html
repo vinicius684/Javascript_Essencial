@@ -104,7 +104,7 @@
             document.getElementById('resultado').value += valor
           }
           if(valor === '=') {
-            var valor_campo = eval(document.getElementById('resultado').value)
+            var valor_campo = eval(document.getElementById('resultado').value)//executar código JavaScript representado como uma string. Basicamente, ela recebe uma string contendo expressões ou declarações JavaScript como entrada, a interpreta e executa como se fosse parte do código fonte do programa em tempo de execução.
             document.getElementById('resultado').value = valor_campo
           }
         } else if (tipo === 'valor') {
